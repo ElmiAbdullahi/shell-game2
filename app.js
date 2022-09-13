@@ -2,16 +2,83 @@
 // import { getRandomItem } from './utils.js';
 
 /* State */
+let gameState = 'guess';
+let guess = '';
+// let pearl = '';
 
 /* Actions */
-function loadPage() {}
+function loadPage() {
+    displayShells();
+}
 
 /* Components */
+const shellOne = document.getElementById('shell-1');
+const shellTwo = document.getElementById('shell-2');
+const shellThree = document.getElementById('shell-3');
 
+const pearlOne = document.getElementById('pearl-1');
+const pearlTwo = document.getElementById('pearl-2');
+const pearlThree = document.getElementById('pearl-3');
+
+const guessDiv = document.getElementById('guesses');
+const resultDiv = document.getElementById('results');
+// const playAgainBtn = document.getElementById('play-again-button');
+
+const guessOne = document.getElementById('guess-1');
+const guessTwo = document.getElementById('guess-2');
+const guessThree = document.getElementById('guess-3');
+
+// const winsDisplay = document.getElementById('wins-display');
+// const lossDisplay = document.getElementById('losses-display');
+// const totalDisplay = document.getElementById('total-display');
 /* Component */
+
+// let pearls =
+
 // get DOM
 // display
+function displayShells() {
+    if (gameState === 'guess') {
+        shellOne.classList.remove('reveal');
+        shellTwo.classList.remove('reveal');
+        shellThree.classList.remove('reveal');
+        resultDiv.classList.remove('hidden');
+    } else {
+        if (guess === 'guess-1') {
+            shellOne.classList.add('reveal');
+            pearlOne.classList.remove('hidden');
+            // resultDiv.classList.remove('hidden');
+        }
+        if (guess === 'guess-2') {
+            shellTwo.classList.add('reveal');
+            pearlTwo.classList.remove('hidden');
+            // resultDiv.classList.remove('hidden');
+        }
+        if (guess === 'guess-3') {
+            shellThree.classList.add('reveal');
+            pearlThree.classList.remove('hidden');
+            // resultDiv.classList.remove('hidden');
+        } else {
+            guessDiv.classList.add('hidden');
+        }
+    }
+}
 // event listeners
-
+guessOne.addEventListener('click', () => {
+    gameState = 'results';
+    guess = 'guess-1';
+    displayShells();
+});
+guessTwo.addEventListener('click', () => {
+    gameState = 'results';
+    guess = 'guess-2';
+    displayShells();
+});
+guessThree.addEventListener('click', () => {
+    gameState = 'results';
+    guess = 'guess-3';
+    displayShells();
+});
+// playAgainBtn.addEventListener('click', () => {});
 /* Run page load code */
-loadPage();
+loadPage(displayShells);

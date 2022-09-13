@@ -1,3 +1,5 @@
+![](./assets/shell-wireframe.png)
+
 # Shell Game
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
