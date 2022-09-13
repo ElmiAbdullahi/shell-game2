@@ -4,7 +4,7 @@
 /* State */
 let gameState = 'guess';
 let guess = '';
-let pearl = '';
+// let pearl = '';
 
 /* Actions */
 function loadPage() {
@@ -22,15 +22,15 @@ const pearlThree = document.getElementById('pearl-3');
 
 const guessDiv = document.getElementById('guesses');
 const resultDiv = document.getElementById('results');
-const playAgainBtn = document.getElementById('play-again-button');
+// const playAgainBtn = document.getElementById('play-again-button');
 
 const guessOne = document.getElementById('guess-1');
 const guessTwo = document.getElementById('guess-2');
 const guessThree = document.getElementById('guess-3');
 
-const winsDisplay = document.getElementById('wins-display');
-const lossDisplay = document.getElementById('losses-display');
-const totalDisplay = document.getElementById('total-display');
+// const winsDisplay = document.getElementById('wins-display');
+// const lossDisplay = document.getElementById('losses-display');
+// const totalDisplay = document.getElementById('total-display');
 /* Component */
 
 // let pearls =
